@@ -1,0 +1,13 @@
+CREATE TABLE public.blog (
+  id INTEGER PRIMARY KEY NOT NULL DEFAULT nextval('blog_id_seq'::regclass),
+  title CHARACTER VARYING(150) NOT NULL,
+  content TEXT NOT NULL,
+  create_date CHARACTER VARYING(15) NOT NULL,
+  summary CHARACTER VARYING(500),
+  title4url CHARACTER VARYING(150) NOT NULL,
+  ad CHARACTER VARYING(500) NOT NULL
+);
+CREATE TABLE public.category (
+  id INTEGER PRIMARY KEY NOT NULL,
+  category_json TEXT NOT NULL
+);

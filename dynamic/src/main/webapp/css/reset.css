@@ -1,0 +1,197 @@
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+
+.container {
+    max-width: 1100px;
+}
+
+.navbar-inverse {
+    background: #2e5d89;
+    border-color: rgba(55, 68, 126, 0.43);
+}
+
+.navbar-inverse .navbar-brand {
+    color: #fff;
+}
+
+.navbar-inverse .navbar-nav > li > a {
+    color: #9DBBD8;
+}
+
+.dropdown-menu > li > a:hover {
+    background-color: #9DBBD8;
+}
+
+.search-input {
+    width: 250px;
+}
+
+.profile {
+    border-bottom: 1px dashed #2E5D89;
+    padding: 5px;
+    margin: 5px;
+}
+
+.footer {
+    min-height: 30px;
+    background-color: #324469;
+    padding: 10px;
+    color: #FFFFFF;
+}
+
+.footer a {
+    color: #FFFFFF;
+}
+
+.caption h3 a {
+    color: #333;
+}
+
+.under_line {
+    border-bottom: 1px solid #e8e8e8;
+    padding-bottom: 5px;
+}
+
+#content {
+    line-height: 1.6;
+    font-size: 16px;
+}
+
+#content p {
+    margin-bottom: 16px;
+}
+
+#content p:last-of-type {
+    margin-bottom: 0px;
+}
+
+.info {
+    color: #999;
+}
+
+blockquote {
+    margin: 0 0 20px;
+    padding: 0 15px;
+    font-size: 16px;
+    border-left: 3px solid rgba(46, 93, 137, 0.58);
+    background-color: rgba(46, 93, 137, 0.05);
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    border-color: grey;
+    margin-bottom: 16px;
+}
+
+table th, .markdown-body table td {
+    padding: 6px 13px;
+    border: 1px solid #ddd;
+}
+
+table td {
+    padding: 6px 13px;
+    border: 1px solid #ddd;
+}
+
+table tr {
+    background-color: #fff;
+    border-top: 1px solid #ccc;
+}
+
+table tr:nth-child(2n) {
+    background-color: #f8f8f8;
+}
+
+thead {
+    display: table-header-group;
+    vertical-align: middle;
+    border-color: inherit;
+}
+
+pre {
+    padding: 16px;
+    overflow: auto;
+    font-size: 85%;
+    line-height: 1.45;
+    background-color: #f7f7f7;
+    border-radius: 3px;
+    word-wrap: normal;
+}
+
+.blog-div {
+    margin-top: -5px;
+}
+
+.next-blog {
+    float: right;
+}
+
+.blog-link {
+    text-decoration: none;
+    color: #337ab7
+}
+
+a.paging {
+    text-decoration: none;
+    font-weight: bold;
+    color: #3F4549
+}
+
+pre code {
+    overflow: auto;
+    word-wrap: normal;
+    white-space: pre;
+}
+
+.navbar-inverse .navbar-nav > .open > a, .navbar-inverse .navbar-nav > .open > a:focus, .navbar-inverse .navbar-nav > .open > a:hover {
+    color: #fff;
+    background-color: rgb(23, 65, 105);
+}
+
+code {
+    color: #333;
+    background-color: #eff0f1;
+}
+
+#disqus_thread {
+    min-height: 500px;
+}
+
+.admin_title {
+    font-size: 30px;
+    font-family: inherit;
+    font-weight: 500;
+    line-height: 1.1;
+    color: inherit;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.list {
+    padding: 10px 10px;
+}
+
+.recommend_link {
+    font-size: 12px;
+}
+
+h1 {
+    font-size: 2em;
+}
+
+h2 {
+    font-size: 1.2em;
+}
+
+.book-list-bg-color {
+    padding: 5px 5px;
+    background-color: #f1f1f1;
+    border : none;
+}
+
+.book-list {
+    padding: 5px 5px;
+    border : none;
+}
