@@ -16,16 +16,7 @@
         <div id="sidebar" class="col-lg-4">
             <jsp:include page="common/about.jsp"/>
             <!-- google ad begin-->
-            <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-            <!-- blog_home_page -->
-            <ins class="adsbygoogle"
-                 style="display:block"
-                 data-ad-client="ca-pub-4950190930837228"
-                 data-ad-slot="3625953595"
-                 data-ad-format="auto"></ins>
-            <script>
-                (adsbygoogle = window.adsbygoogle || []).push({});
-            </script>
+
             <!-- google ad end-->
             <div class="row profile">
                 <h4>Popular posts</h4>
@@ -38,16 +29,7 @@
                 </c:forEach>
             </div>
             <!-- google ad begin-->
-            <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-            <!-- blog_home_page -->
-            <ins class="adsbygoogle"
-                 style="display:block"
-                 data-ad-client="ca-pub-4950190930837228"
-                 data-ad-slot="3625953595"
-                 data-ad-format="auto"></ins>
-            <script>
-                (adsbygoogle = window.adsbygoogle || []).push({});
-            </script>
+
             <!-- google ad end-->
         </div>
     </div>

@@ -22,7 +22,7 @@
 </head>
 <body>
 <div id="navbar" class="navbar navbar-inverse bs-docs-nav">
-    <div class="container"><a href="/" class="navbar-brand">HenryXi</a>
+    <div class="container"><a href="/" class="navbar-brand">codingfuns</a>
         <div class="collapse navbar-collapse bs-navbar-collapse">
             <ul class="nav navbar-nav">
                 <li class="dropdown">
@@ -59,7 +59,7 @@
             </ul>
             <form class="navbar-form pull-right" method="get"
                   onsubmit="site_search();return false;">
-                <input placeholder="Search in HenryXi.com" type="text" class="form-control" name="q"
+                <input placeholder="Search in codingfuns.com" type="text" class="form-control" name="q"
                        id="q" style="width: 250px">
                 <button type="submit" class="btn btn-default">Search</button>
             </form>

@@ -61,7 +61,7 @@ public class BlogDao {
 
     public List<Blog> getRandomBlog(int number) {
         BlogExample example = new BlogExample();
-        example.setOrderByClause("random()");
+        example.setOrderByClause("RAND()<=0.0006");//todo:get rundom blog need test
         PageHelper.startPage(1, number, false);
         return blogMapper.selectByExample(example);
     }

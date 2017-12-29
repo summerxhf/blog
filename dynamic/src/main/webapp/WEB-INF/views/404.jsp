@@ -4,45 +4,27 @@
 <div class="container">
     <div class="row">
         <script language="JavaScript">
-            var current=10;
-            var timerId=window.setInterval(function(){
-                if(current==1){
-                    clearInterval(timerId);
-                    window.location.replace('http://www.codingfuns.com');
-                }
-                current=current-1;
-                document.getElementById('second').text=current;
-            }, 1000);
+//            var current=10;
+//            var timerId=window.setInterval(function(){
+//                if(current==1){
+//                    clearInterval(timerId);
+//                    window.location.replace('http://www.codingfuns.com');
+//                }
+//                current=current-1;
+//                document.getElementById('second').text=current;
+//            }, 1000);
         </script>
         <div class="col-lg-9">
             <h2><span>Page Not Found(404) Error</span></h2>
             <p>We couldn't find the page you requested.This page will redirect to <a href="http://www.codingfuns.com">Home</a> in <a id="second">10</a> seconds</p>
             <!-- google ad begin-->
-            <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-            <!-- blog_home_page -->
-            <ins class="adsbygoogle"
-                 style="display:block"
-                 data-ad-client="ca-pub-4950190930837228"
-                 data-ad-slot="3625953595"
-                 data-ad-format="auto"></ins>
-            <script>
-                (adsbygoogle = window.adsbygoogle || []).push({});
-            </script>
+
             <!-- google ad end-->
         </div>
         <div id="sidebar" class="col-lg-3">
             <jsp:include page="common/about.jsp"/>
             <!-- google ad begin-->
-            <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-            <!-- blog_home_page -->
-            <ins class="adsbygoogle"
-                 style="display:block"
-                 data-ad-client="ca-pub-4950190930837228"
-                 data-ad-slot="3625953595"
-                 data-ad-format="auto"></ins>
-            <script>
-                (adsbygoogle = window.adsbygoogle || []).push({});
-            </script>
+
             <!-- google ad end-->
         </div>
     </div>

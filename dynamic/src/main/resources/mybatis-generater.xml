@@ -14,7 +14,7 @@
         </commentGenerator>
 
         <!-- !!!! Database Configurations !!!! -->
-        <jdbcConnection driverClass="org.postgresql.Driver" connectionURL="jdbc:postgresql://10.232.29.201:5432/blog" userId="postgres" password="postgres"/>
+        <jdbcConnection driverClass="org.mysql.Driver" connectionURL="jdbc:mysql://localhost:3306/blog_table" userId="root" password="root"/>
 
         <javaTypeResolver>
             <property name="forceBigDecimals" value="false"/>
@@ -38,14 +38,6 @@
 
         <!-- !!!! Table Configurations !!!! -->
         <table tableName="blog" domainObjectName="Blog">
-            <property name="ignoreQualifiersAtRuntime" value="true"/>
-            <property name="modelOnly" value="false"/>
-        </table>
-        <table tableName="book" domainObjectName="Book">
-            <property name="ignoreQualifiersAtRuntime" value="true"/>
-            <property name="modelOnly" value="false"/>
-        </table>
-        <table tableName="tag" domainObjectName="Tag">
             <property name="ignoreQualifiersAtRuntime" value="true"/>
             <property name="modelOnly" value="false"/>
         </table>

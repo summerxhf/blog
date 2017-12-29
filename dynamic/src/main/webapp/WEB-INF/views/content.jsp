@@ -10,7 +10,7 @@
             </h1>
             ${blog.content}
             <!-- google ad begin-->
-            ${blog.ad}
+            <%--${blog.ad}--%>
             <!-- google ad end-->
             <div class="blog-div">
                 <span>
@@ -34,23 +34,25 @@
                     this.page.url = "http://www.codingfuns.com/" + "${blog.title4url}";
                     this.page.identifier = '${blog.id}';
                 };
-                (function () { // DON'T EDIT BELOW THIS LINE
+                (function() { // DON'T EDIT BELOW THIS LINE
                     var d = document, s = d.createElement('script');
-
-                    s.src = '//henryxi.disqus.com/embed.js';
-
+                    s.src = 'https://summerxings-blog.disqus.com/embed.js';
                     s.setAttribute('data-timestamp', +new Date());
                     (d.head || d.body).appendChild(s);
                 })();
             </script>
-            <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments
-                powered by Disqus.</a></noscript>
+            <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+            <!-- disqus end -->
+
         </div>
-        <!-- disqus end -->
+
+
+
+
         <div id="sidebar" class="col-lg-4">
             <jsp:include page="common/about.jsp"/>
             <!-- google ad begin-->
-            ${blog.ad}
+            <%--${blog.ad}--%>
             <!-- google ad end-->
             <div class="row profile">
                 <h4>Popular posts</h4>
@@ -63,7 +65,7 @@
                 </c:forEach>
             </div>
             <!-- google ad begin-->
-            ${blog.ad}
+            <%--${blog.ad}--%>
             <!-- google ad end-->
         </div>
     </div>

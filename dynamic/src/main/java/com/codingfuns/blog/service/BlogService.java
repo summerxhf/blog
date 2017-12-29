@@ -18,16 +18,16 @@ import java.util.*;
 
 @Service
 public class BlogService {
-    private static final String DEFAULT_AD = "<script async src=\"//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js\"></script>\n" +
-            "<!-- blog-default -->\n" +
-            "<ins class=\"adsbygoogle\"\n" +
-            "     style=\"display:block\"\n" +
-            "     data-ad-client=\"ca-pub-4950190930837228\"\n" +
-            "     data-ad-slot=\"6455464155\"\n" +
-            "     data-ad-format=\"auto\"></ins>\n" +
-            "<script>\n" +
-            "(adsbygoogle = window.adsbygoogle || []).push({});\n" +
-            "</script>";
+//    private static final String DEFAULT_AD = "<script async src=\"//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js\"></script>\n" +
+//            "<!-- blog-default -->\n" +
+//            "<ins class=\"adsbygoogle\"\n" +
+//            "     style=\"display:block\"\n" +
+//            "     data-ad-client=\"ca-pub-4950190930837228\"\n" +
+//            "     data-ad-slot=\"6455464155\"\n" +
+//            "     data-ad-format=\"auto\"></ins>\n" +
+//            "<script>\n" +
+//            "(adsbygoogle = window.adsbygoogle || []).push({});\n" +
+//            "</script>";
 
     @Value("${page.size}")
     private int pageSize;
@@ -105,7 +105,7 @@ public class BlogService {
     }
 
     public String saveBlog(String gitUrl, String hashCode, String ad) {
-        if (!gitUrl.startsWith("https://github.com/HenryXi/")) {
+        if (!gitUrl.startsWith("https://github.com/summerxhf/")) {
             return "500";
         }
         try {
@@ -147,7 +147,7 @@ public class BlogService {
                 tobeSaved.setSummary(summary);
                 tobeSaved.setCreateDate(createDate);
                 tobeSaved.setUpdateDate(updateDate);
-                tobeSaved.setAd(StringUtils.defaultIfEmpty(ad, DEFAULT_AD));
+//                tobeSaved.setAd(StringUtils.defaultIfEmpty(ad, DEFAULT_AD));
                 tobeSaved.setGitUrl(gitUrl);
                 blogDao.save(tobeSaved);
             }
