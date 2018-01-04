@@ -1,6 +1,6 @@
 
 # mysql 5.7.20 encoding set  utf8
-测试乱码
+
 **background**
 when i insert chinese into mysql database,it's become ? ,messy code. so i think i need to set mysql database encoding.
 
@@ -43,7 +43,7 @@ mysql> show variables like "%character%";
 +--------------------------+----------------------------+
 8 rows in set (0.01 sec)
 ```
-
-
 summary
+
+
 we need pay attention to  the differences in software versions
