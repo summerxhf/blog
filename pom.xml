@@ -48,10 +48,9 @@
         </plugins>
     </build>
     <repositories>
-    <repository>
-        <id>central</id>
-        <name>Central</name>
-        <url>http://repo1.maven.org/maven2</url>
-    </repository>
+        <repository>
+            <id>my-alternate-repository</id>
+            <url>http://myrepo.net/repo</url>
+        </repository>
     </repositories>
 </project>
