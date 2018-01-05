@@ -43,7 +43,7 @@ mysql> show variables like "%character%";
 +--------------------------+----------------------------+
 8 rows in set (0.01 sec)
 ```
+summary
 
 
-Conclusion
 we need pay attention to  the differences in software versions
