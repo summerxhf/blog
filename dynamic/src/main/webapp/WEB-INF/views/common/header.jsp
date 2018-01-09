@@ -22,7 +22,7 @@
 </head>
 <body>
 <div id="navbar" class="navbar navbar-inverse bs-docs-nav">
-    <div class="container"><a href="/" class="navbar-brand">codingfuns (keep it simple, stupid)</a>
+    <div class="container"><a href="/" class="navbar-brand">codingfuns</a>
         <div class="collapse navbar-collapse bs-navbar-collapse">
             <%--<ul class="nav navbar-nav">--%>
                 <%--<li class="dropdown">--%>
