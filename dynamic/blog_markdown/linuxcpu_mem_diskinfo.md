@@ -22,10 +22,11 @@ cat /proc/cpuinfo| grep "processor"| wc -l
 #查看CPU信息（型号）
 cat /proc/cpuinfo | grep name | cut -f2 -d: | uniq -c
 ```
-
----
+<br>
 
 # <font size="3">内存信息</font><br>
+
+---
 > 命令格式:free [参数]
 
 free功能:显示系统使用和空闲内存情况,包括物理内存、交互区swap内存、以及被内核使用的buffer。共享内存将被忽略。<br>
@@ -86,10 +87,11 @@ Swap:      2097148      57112    2040036
 
 ```
 **free结果参数解释**
+
 基本参数 | 含义
 ---|---
 Mem | cpu内存
--/+ buffers/cache |磁盘缓存和缓冲区总大小
+buffers cache|磁盘缓存和缓冲区总大小
 Swap | 虚拟内存(实际会IO)
 
 
@@ -158,11 +160,12 @@ DirectMap2M:     1040384 kB
 
 可以看出系统内存1GB swap空间2GB(后来配置的swap,swap下篇说明)
 
-
----
+<br>
 
 
 # <font size="3">硬盘信息</font>
+
+---
 
 linux提供了了一下命令检查磁盘空间
 - 检查linux文件系统的可用空间<br>
@@ -261,4 +264,9 @@ du(Disk usage)基本格式: <br>
 ```
 
 - summary<br>
+---
+
 查看cpu信息、查看内存信息free、查看磁盘信息df -h 和du -h 、  du -ah
+
+
+---
