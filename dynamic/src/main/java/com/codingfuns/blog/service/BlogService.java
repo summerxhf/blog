@@ -113,7 +113,7 @@ public class BlogService {
             if (!doc.select(".commit-tease-sha").text().trim().equals(hashCode)) {
                 return "500";
             }
-            String title = doc.select("article h1").text();
+            String title = doc.select("article h1:first").text();
             String title4url = doc.select("article h1 a").attr("href").substring(1);
             doc.select("article h1").remove();
             doc.select(".anchor svg").remove();
