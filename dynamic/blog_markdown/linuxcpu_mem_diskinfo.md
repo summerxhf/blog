@@ -2,9 +2,10 @@
 # linux cpu and memory and disk knowledge
 
 
-
-
 # <font size="3">cpu 信息查看</font> <br>
+
+---
+
 ```
 #查看物理CPU个数 
 cat /proc/cpuinfo| grep "physical id"| sort| uniq| wc -l
@@ -21,6 +22,8 @@ cat /proc/cpuinfo| grep "processor"| wc -l
 #查看CPU信息（型号）
 cat /proc/cpuinfo | grep name | cut -f2 -d: | uniq -c
 ```
+
+---
 
 # <font size="3">内存信息</font><br>
 > 命令格式:free [参数]
