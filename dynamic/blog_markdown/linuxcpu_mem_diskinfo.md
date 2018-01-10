@@ -1,6 +1,7 @@
 
 # linux cpu and memory and disk knowledge
 
+- 本文主要是总结在linux上查看计算机cpu 内存和硬盘信息相关命令
 
 # <font size="3">cpu 信息查看</font> <br>
 
