@@ -1,7 +1,7 @@
 
 # linux cpu and memory and disk knowledge
 
-[toc]
+
 
 
 # <font size="3">cpu 信息查看</font> <br>
