@@ -62,7 +62,7 @@ Swap:  2097148k total,    89796k used,  2007352k free,   161548k cached
 
 每行代表的意思,第一行
 
-| 第一行参数| 意义 |
+| 第一行参数 | 意义 |
 | ---|--- |
 | 15:43:17 |系统时间 |
 | 4:37 | 系统开机到现在经过了多长时间 |
@@ -79,6 +79,7 @@ Swap:  2097148k total,    89796k used,  2007352k free,   161548k cached
 | 86 sleeping | 系统1分钟,5分钟,15分钟负载信息|
 | 0 stopped | 停止的进程数 |
 | 0 zombie | 僵尸进程 |
+
 第三行
 | 第三行参数 | 意义 |
 | ---|--- |
@@ -91,15 +92,21 @@ Swap:  2097148k total,    89796k used,  2007352k free,   161548k cached
 | 0.0%hi | cpu硬中断百分比 |
 | 0.0%si | cpu软中断百分比 |
 | 0.0%st | cpu非自愿等待百分比 |
+
 第四和第五行
+<br>
 ```
 PID USER      PR  NI  VIRT  RES  SHR S %CPU %MEM    TIME+  COMMAND                                                             
  4197 root      20   0 2283m 253m  13m S  0.6 25.5   0:45.43 java
 ```
+
+
 | 参数 | 意义 |
 | ---|--- |
 | Men |内存 |
 | swap | swap空间 |
+
+
 
 进程信息<br>
 
@@ -119,6 +126,7 @@ PID USER      PR  NI  VIRT  RES  SHR S %CPU %MEM    TIME+  COMMAND
 | %MEM | 使用物理内存总内存百分比 |
 | TIME+ | 进程启动后占用cpu时间 |
 | COMMAND | 进程启动名称 |
+
 
 
 从网上找了一个多核cpu的案例
