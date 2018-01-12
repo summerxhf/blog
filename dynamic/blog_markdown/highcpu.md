@@ -100,10 +100,12 @@ PID USER      PR  NI  VIRT  RES  SHR S %CPU %MEM    TIME+  COMMAND
 | ---|--- |
 | Men |内存 |
 | swap | swap空间 |
-进程信息
+
+进程信息<br>
+
  PID USER      PR  NI  VIRT  RES  SHR S %CPU %MEM    TIME+  COMMAND 
  | 参数 | 意义 |
-| ---|---
+| ---|--- |
 | PID |进程ID |
 | USER | 进程所有者 |
 | PR | 进程优先级,越小越优先 |
