@@ -31,7 +31,7 @@ Last login: Sun Jan 14 07:24:43 2018 from 114.252.62.207
 <td valign="top"><b>Recommended swap space if allowing for hibernation </b></td>
 </tr>
 <tr>
-<td valign="top"><b>?</b><b>&nbsp;2GB </b></td>
+<td valign="top"><b>小于等于</b><b>&nbsp;2GB </b></td>
 <td valign="top">2 times the amount of RAM</td>
 <td valign="top">3 times the amount of RAM</td>
 </tr>
