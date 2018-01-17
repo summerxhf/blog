@@ -1,6 +1,6 @@
 # spring boot resource file
 
-- 程序结构
+- **程序结构**
 ```
 ├─main
 │  ├─java
@@ -17,7 +17,7 @@
     └─java
 ```
 
-- ResourcesController类
+- **ResourcesController类**
 ```
 package com.hf.controller;
 
@@ -69,12 +69,12 @@ public class ResourcesController {
 
 ```
 
-- 访问http://localhost:8080/get-resources
+- **访问http://localhost:8080/get-resources**
 ```
 the content of resources: hello test.text balabalabala
 ```
 
-- summary
+- **summary**
 just talk -->don't talk ,give me code.-->talk,and give me code.
 
 
