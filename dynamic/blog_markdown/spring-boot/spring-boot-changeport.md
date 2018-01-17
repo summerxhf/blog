@@ -1,5 +1,6 @@
 # spring boot change port
-我们在main方法中使用
+我们在main方法中使用SpringApplication.run(ResourcesController.class,args),默认的tomcat的端口号是8080,我们可以修改
+默认的端口号,两种方式如下<br>
 **1.修改application.properties中添加**
 ```
 =8090
