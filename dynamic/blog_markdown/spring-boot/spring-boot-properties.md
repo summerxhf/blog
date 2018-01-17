@@ -2,7 +2,7 @@
 
 spring可以读取配置文件,spring读取配置文件的方式更加简单了,使用ConfigurationProperties标签就可以.
 
-1. 程序结构
+1. **程序结构**<br>
 main<br>
 ----java<br>
 --------com.hf.properties<br>
@@ -12,7 +12,7 @@ main<br>
 ----resource<br>
 ---------application.properties<br>
         
-2. pom.xml依赖如下
+2. **pom.xml**依赖如下<br>
 ```
 <dependencies>
         <dependency>
@@ -22,7 +22,7 @@ main<br>
         </dependency>
 ```
 
-3. Properties 文件
+3. **Properties** 文件<br>
 spring boot默认加载的配置文件application.properties.
 我们也可以出了加载默认配置文件,可以加载自己额外的配置文件.
 application.properties
@@ -38,7 +38,7 @@ server.info.username=user2
 server.info.password=password2
 ```
 
-4. java实体
+4. **java实体**<br>
 加载配置文件中的属性我们建立了DefaultProperties.java(和默认配置文件匹配)和SpecialProperties.java(和额外的配置文件匹配)
 DefaultProperties.java
 ```
@@ -120,7 +120,7 @@ public class SpecialProperties {
 注意:这里使用了Value标签,但是test中发现貌似在默认的配置文件起作用,所以在自己定义的配置文件的实体,使用get() set()方式.
 
 
-5. java controller
+5. **java controller**<br>
 ```
 package com.hf.properties;
 
@@ -164,5 +164,5 @@ public class SimpleController {
 DefaultProperties{address=192.168.1.1,username=user1,password=password}
 SpecialProperties{address=192.168.1.2,username=user2,password=password2}
 ```
-summary:
+**summary**:<br>
 不急功近利,感觉自己有问题的时候,也许问题并没有想象中那么严重,不要放大自己的weakness,加油
