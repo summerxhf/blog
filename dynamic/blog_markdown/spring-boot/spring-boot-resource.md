@@ -1,5 +1,5 @@
 # spring boot resource file
-
+spring可以读取资源文件,使用ResourceLoader,如下
 - **程序结构**
 ```
 ├─main
