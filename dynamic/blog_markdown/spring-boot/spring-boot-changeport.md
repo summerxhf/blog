@@ -1,11 +1,11 @@
 # spring boot change port
 我们在main方法中使用
-1.修改application.properties中添加
+**1.修改application.properties中添加**
 ```
 =8090
 ```
 
-2.添加vm参数
+**2.添加vm参数**
 ```
 -Dserver.port=8090
 ```
