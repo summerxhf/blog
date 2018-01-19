@@ -33,7 +33,7 @@ public class BlogController {
         modelMap.put("blogList", blogVoList);
         modelMap.put("currentPage", pageNum);
         modelMap.put("totalPage", totalPage);
-        modelMap.put("title", "Web development tutorial");
+        modelMap.put("title", "www.codingfuns.com");
         return "index";
     }
 
