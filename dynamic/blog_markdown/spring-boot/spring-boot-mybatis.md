@@ -1,4 +1,4 @@
-# spring boot 结合 mybatis
+# spring boot with mybatis
 
 mybatis是一款优秀的持久层框架, 它支持定制化SQL、存储过程已经高级映射。mybatis避免了几乎所有的jdbc代码和手动设置参数以及获取结果集。mybatis可以使用简单的xml或者注解来配置和映射原生信息，将接口和java的POJOs（plain old java object，普通java对象）映射成数据库中的记录。
 
