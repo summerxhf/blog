@@ -4,15 +4,15 @@
 <div class="container">
     <div class="row">
         <script language="JavaScript">
-//            var current=10;
-//            var timerId=window.setInterval(function(){
-//                if(current==1){
-//                    clearInterval(timerId);
-//                    window.location.replace('http://www.codingfuns.com');
-//                }
-//                current=current-1;
-//                document.getElementById('second').text=current;
-//            }, 1000);
+           var current=10;
+           var timerId=window.setInterval(function(){
+               if(current==1){
+                   clearInterval(timerId);
+                   window.location.replace('http://www.codingfuns.com');
+               }
+               current=current-1;
+               document.getElementById('second').text=current;
+           }, 1000);
         </script>
         <div class="col-lg-9">
             <h2><span>Internal Server (500) Error</span></h2>
