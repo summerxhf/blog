@@ -71,4 +71,4 @@ export JRE_HOME=/opt/jdk1.8.0_161/jre
 export PATH=$PATH:/opt/jdk1.8.0_161/bin:/opt/jdk1.8.0_161/jre/bin
 ```
 
-https://tecadmin.net/install-java-8-on-centos-rhel-and-fedora/#
+²Î¿¼:https://tecadmin.net/install-java-8-on-centos-rhel-and-fedora/#
