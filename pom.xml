@@ -21,7 +21,7 @@
                 <activeByDefault>true</activeByDefault>
             </activation>
             <properties>
-                <database>108.61.160.203</database>
+                <database>127.0.0.1</database>
                 <war.name>dev-ROOT</war.name>
             </properties>
         </profile>
