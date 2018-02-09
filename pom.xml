@@ -17,19 +17,19 @@
     <profiles>
         <profile>
             <id>develop</id>
+            <properties>
+                <database>192.168.75.62</database>
+                <war.name>ROOT</war.name>
+            </properties>
+        </profile>
+        <profile>
+            <id>product</id>
             <activation>
                 <activeByDefault>true</activeByDefault>
             </activation>
             <properties>
                 <database>127.0.0.1</database>
                 <war.name>dev-ROOT</war.name>
-            </properties>
-        </profile>
-        <profile>
-            <id>product</id>
-            <properties>
-                <database>db_host</database>
-                <war.name>ROOT</war.name>
             </properties>
         </profile>
     </profiles>
