@@ -13,21 +13,19 @@
     <properties>
         <spring.version>4.1.6.RELEASE</spring.version>
     </properties>
-
     <profiles>
         <profile>
             <id>develop</id>
             <properties>
+                <active.profile>dev</active.profile>
                 <database>192.168.75.62</database>
                 <war.name>ROOT</war.name>
             </properties>
         </profile>
         <profile>
             <id>product</id>
-            <activation>
-                <activeByDefault>true</activeByDefault>
-            </activation>
             <properties>
+                <active.profile>product</active.profile>
                 <database>127.0.0.1</database>
                 <war.name>dev-ROOT</war.name>
             </properties>
