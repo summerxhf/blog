@@ -139,15 +139,15 @@ public class BlogService {
                 blogDao.update(blogInDB);
             } else {
                 Blog tobeSaved = new Blog();
-                int count = blogDao.countBlog();
-                tobeSaved.setId(count + 1);
+//                int count = blogDao.countBlog();//自增不需要设置id
+//                tobeSaved.setId(count + 1);
                 tobeSaved.setContent(content);
                 tobeSaved.setTitle(title);
                 tobeSaved.setTitle4url(title4url);
                 tobeSaved.setSummary(summary);
                 tobeSaved.setCreateDate(createDate);
                 tobeSaved.setUpdateDate(updateDate);
-//                tobeSaved.setAd(StringUtils.defaultIfEmpty(ad, DEFAULT_AD));
+//              tobeSaved.setAd(StringUtils.defaultIfEmpty(ad, DEFAULT_AD));
                 tobeSaved.setGitUrl(gitUrl);
                 blogDao.save(tobeSaved);
             }
