@@ -36,7 +36,8 @@ body {
 
 .footer {
     min-height: 30px;
-    background-color: #324469;
+    background-color: #0e90d2;
+    /*background-color: #324469;*/
     padding: 10px;
     color: #FFFFFF;
 }
