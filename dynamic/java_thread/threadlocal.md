@@ -1,6 +1,8 @@
-
+ <header>
 <p id="site_url" hidden>java-threadlocal-basics</p><br>
-
+</header>
+>! Spoiler text <br>
+    
 # threadlocal
 
 - threadlocalµÄdemo
