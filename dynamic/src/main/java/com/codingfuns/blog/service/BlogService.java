@@ -139,7 +139,7 @@ public class BlogService {
                 blogDao.update(blogInDB);
             } else {
                 Blog tobeSaved = new Blog();
-//                int count = blogDao.countBlog();//自增不需要设置id
+//                int count = blogDao.countBlog();//鑷涓嶉渶瑕佽缃甶d
 //                tobeSaved.setId(count + 1);
                 tobeSaved.setContent(content);
                 tobeSaved.setTitle(title);
