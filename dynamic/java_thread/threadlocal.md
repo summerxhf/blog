@@ -89,7 +89,7 @@ threadlocal 这个类能使线程中的某个值与保存值的对象关联起来。ThreadLocal提供了get
 
 **使用场景**<br>
 最常见的ThreadLocal的使用场景用来解决数据库连接、session管理。
-如下代码：
+如下代码：<br>
 **数据库连接**
 ```
 package usageScenario;
@@ -199,7 +199,7 @@ set 方法设置当前线程的局部副本变量，子类不需要重写这个方法
     }
 ```
 
-**1.   ThreadLocal 类中的ThreadLocalMap**
+**1.   ThreadLocal 类中的ThreadLocalMap**(图片来自于网络)
 ![图片来自网络](https://mmbiz.qpic.cn/mmbiz_png/8Jeic82Or04mib65dVtxHYQia5J0gg88fH46Wx4xMaswgCIjjAcuDic1mAUec0oiaepSzSJNZzMOxdvcSFkK7rgtrMg/?tp=webp&wxfrom=5&wx_lazy=1)
 
 从源码中可以看到变量是放到一个map结构中的Entry中，ThreadLocalMap是ThreadLocal类静态内部类，可以看到源码注释中的说明
@@ -232,7 +232,7 @@ Entry继承WeakReference,和HashMap的区别,Entry中没有next字段, 不存在链表结构。
         }
 ```
 
-**2. ThreadLocalMap Entry中的key hashcode怎么自增?**
+**2. ThreadLocalMap Entry中的key hashcode怎么自增?**<br>
 每个ThreadLocal对象中都一个hash值,private static final int HASH_INCREMENT = 0x61c88647;,
 在插入过程中,根据ThreadLocal对象的hash值,定位到table中的位置i,过程如下: 
 - 如果当前位置是空的，在当前位置初始化一个Entry对象放到位置i上；
@@ -243,7 +243,7 @@ Entry继承WeakReference,和HashMap的区别,Entry中没有next字段, 不存在链表结构。
 
 ![这里写图片描述](https://img-blog.csdn.net/20180328161446205?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2xvdmVzdW1tZXJmb3JldmVy/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70)
 
-**3.关于ThreadLocal的内存泄漏**
+**3.关于ThreadLocal的内存泄漏**<br>
 在使用ThreadLocal的时候，key和value放在Entry中，如下代码中可以看到Entry 继承弱引用WeakReference，所以深入代码可以看到
 key被保存到了WeakReference对象中。
 
@@ -262,20 +262,22 @@ value有可能一直得不到回收，因为创建ThreadLocal的线程还在，可能会发生内存泄漏。
         }
 ```
 
-**4.如何避免ThreadLocal的内存泄漏**
+**4.如何避免ThreadLocal的内存泄漏**<br>
 可以在使用完本线程的ThreadLocal后,显示调用remove()方法,就会删除Entry中的key对应的value。
 
-**5.上面提到了弱引用，什么是弱引用和强引用，弱引用一定会发生内存泄漏吗？**
+**5.上面提到了弱引用，什么是弱引用和强引用，弱引用一定会发生内存泄漏吗？**<br>
 我们知道当我们new的对象多的时候，且给java进程分配的内存不足够大的时候，可能会发生gc异常，会报OutOfMemoryError错误，
 使得程序终止运行，也不会随意的回收具有强引用的对象来解决内存不足的问题。
 而弱引用恰好相反，java的弱引用指的是java.lang.ref.WeakReference<T> 类。弱引用的对象有短暂的生命周期，在垃圾回收的线程中，扫描所管辖的区域过程中，一旦发现了只有弱引用的对象，
 不管内存是否足够与否，都会回收它的内存。只不过垃圾回收线程是一个优先级比较低的线程，因为不一定会很快的发现弱引用的对象。
 
-java中还有软引用和虚引用，软引用和弱引用区别是，只有当对象内存空间不足时，才会回收软引用。
-
 而java中的虚引用是最弱的引用，虚引用的作用是它指向的对象被回收后，虚引用本身会被加入到引用队列，用于记录它指向的对象已被回收。
 
-下面表格是对强引用、软引用、弱引用、虚引用的区别分析
+(ps:并不是弱引用才会发现内存泄漏,是在一定场合的使用情况下,其实除了强应用之外的引用,是为了避免发生内存泄漏而存在的。所以说内存泄漏并不是因为弱引用和强引用，是因为某些数据结构使用的不恰当，可能会造成内存泄漏)
+java中还有软引用和虚引用，软引用和弱引用区别是，只有当对象内存空间不足时，才会回收软引用。)
+
+
+**下面表格是对强引用、软引用、弱引用、虚引用的区别分析**
 <table border="1" cellpadding="0" cellspacing="0" style="font-size:13px;border-collapse:collapse;margin-top:10px;margin-bottom:10px;color:rgb(0,0,102);font-family:verdana, arial, helvetica, sans-serif;"><tbody style="background-color:inherit;"><tr style="background-color:inherit;"><td valign="top" style="border:1px solid rgb(153,153,153);padding:5px 10px;background-color:inherit;"><p style="margin-top:5px;margin-bottom:5px;background-color:inherit;"><span style="font-family:'Courier New';font-size:12px;"><strong>引用类型</strong></span></p></td><td valign="top" style="border:1px solid rgb(153,153,153);padding:5px 10px;background-color:inherit;"><p style="margin-top:5px;margin-bottom:5px;background-color:inherit;"><span style="background-color:inherit;font-size:14px;"><span style="background-color:inherit;"><span style="font-family:'Courier New';background-color:inherit;"><strong>被垃圾回收时间</strong></span></span></span></p></td><td valign="top" style="border:1px solid rgb(153,153,153);padding:5px 10px;background-color:inherit;"><p style="margin-top:5px;margin-bottom:5px;background-color:inherit;"><span style="background-color:inherit;font-size:14px;"><span style="background-color:inherit;"><span style="font-family:'Courier New';background-color:inherit;"><strong>   用途</strong></span></span></span></p></td><td valign="top" style="border:1px solid rgb(153,153,153);padding:5px 10px;background-color:inherit;"><p style="margin-top:5px;margin-bottom:5px;background-color:inherit;"><span style="background-color:inherit;font-size:14px;"><span style="background-color:inherit;"><span style="font-family:'Courier New';background-color:inherit;"><strong>   生存时间</strong></span></span></span></p></td></tr><tr style="background-color:inherit;"><td valign="top" style="border:1px solid rgb(153,153,153);padding:5px 10px;background-color:inherit;"><p style="margin-top:5px;margin-bottom:5px;background-color:inherit;"><span style="background-color:inherit;font-size:14px;"><span style="font-family:'Courier New';background-color:inherit;">强引用</span></span></p></td><td valign="top" style="border:1px solid rgb(153,153,153);padding:5px 10px;background-color:inherit;"><p style="margin-top:5px;margin-bottom:5px;background-color:inherit;"><span style="background-color:inherit;font-size:14px;"><span style="font-family:'Courier New';background-color:inherit;">从来不会</span></span></p></td><td valign="top" style="border:1px solid rgb(153,153,153);padding:5px 10px;background-color:inherit;"><p style="margin-top:5px;margin-bottom:5px;background-color:inherit;"><span style="background-color:inherit;font-size:14px;"><span style="font-family:'Courier New';background-color:inherit;">对象的一般状态</span></span></p></td><td valign="top" style="border:1px solid rgb(153,153,153);padding:5px 10px;background-color:inherit;"><p style="margin-top:5px;margin-bottom:5px;background-color:inherit;"><span style="background-color:inherit;font-size:14px;"><span style="font-family:'Courier New';background-color:inherit;">JVM停止运行时终止</span></span></p></td></tr><tr style="background-color:inherit;"><td valign="top" style="border:1px solid rgb(153,153,153);padding:5px 10px;background-color:inherit;"><p style="margin-top:5px;margin-bottom:5px;background-color:inherit;"><span style="background-color:inherit;color:rgb(255,0,0);font-size:14px;"><span style="font-family:'Courier New';background-color:inherit;">软引用</span></span></p></td><td valign="top" style="border:1px solid rgb(153,153,153);padding:5px 10px;background-color:inherit;"><p style="margin-top:5px;margin-bottom:5px;background-color:inherit;"><span style="background-color:inherit;font-size:14px;"><span style="font-family:'Courier New';background-color:inherit;">在内存不足时</span></span></p></td><td valign="top" style="border:1px solid rgb(153,153,153);padding:5px 10px;background-color:inherit;"><p style="margin-top:5px;margin-bottom:5px;background-color:inherit;"><span style="background-color:inherit;font-size:14px;"><span style="font-family:'Courier New';background-color:inherit;">对象缓存</span></span></p></td><td valign="top" style="border:1px solid rgb(153,153,153);padding:5px 10px;background-color:inherit;"><p style="margin-top:5px;margin-bottom:5px;background-color:inherit;"><span style="background-color:inherit;font-size:14px;"><span style="font-family:'Courier New';background-color:inherit;">内存不足时终止</span></span></p></td></tr><tr style="background-color:inherit;"><td valign="top" style="border:1px solid rgb(153,153,153);padding:5px 10px;background-color:inherit;"><p style="margin-top:5px;margin-bottom:5px;background-color:inherit;"><span style="background-color:inherit;color:rgb(255,0,0);font-size:14px;"><span style="font-family:'Courier New';background-color:inherit;">弱引用</span></span></p></td><td valign="top" style="border:1px solid rgb(153,153,153);padding:5px 10px;background-color:inherit;"><p style="margin-top:5px;margin-bottom:5px;background-color:inherit;"><span style="background-color:inherit;font-size:14px;"><span style="font-family:'Courier New';background-color:inherit;">在垃圾回收时</span></span></p></td><td valign="top" style="border:1px solid rgb(153,153,153);padding:5px 10px;background-color:inherit;"><p style="margin-top:5px;margin-bottom:5px;background-color:inherit;"><span style="background-color:inherit;font-size:14px;"><span style="font-family:'Courier New';background-color:inherit;">对象缓存</span></span></p></td><td valign="top" style="border:1px solid rgb(153,153,153);padding:5px 10px;background-color:inherit;"><p style="margin-top:5px;margin-bottom:5px;background-color:inherit;"><span style="background-color:inherit;font-size:14px;"><span style="font-family:'Courier New';background-color:inherit;">gc运行后终止</span></span></p></td></tr><tr style="background-color:inherit;"><td valign="top" style="border:1px solid rgb(153,153,153);padding:5px 10px;background-color:inherit;"><p style="margin-top:5px;margin-bottom:5px;background-color:inherit;"><span style="background-color:inherit;color:rgb(255,0,0);font-size:14px;"><span style="font-family:'Courier New';background-color:inherit;">虚引用</span></span></p></td><td valign="top" style="border:1px solid rgb(153,153,153);padding:5px 10px;background-color:inherit;"><p style="margin-top:5px;margin-bottom:5px;background-color:inherit;"><span style="background-color:inherit;font-size:14px;"><span style="font-family:'Courier New';background-color:inherit;">Unknown</span></span></p></td><td valign="top" style="border:1px solid rgb(153,153,153);padding:5px 10px;background-color:inherit;"><p style="margin-top:5px;margin-bottom:5px;background-color:inherit;"><span style="background-color:inherit;font-size:14px;"><span style="font-family:'Courier New';background-color:inherit;">Unknown</span></span></p></td><td valign="top" style="border:1px solid rgb(153,153,153);padding:5px 10px;background-color:inherit;"><p style="margin-top:5px;margin-bottom:5px;background-color:inherit;"><span style="background-color:inherit;font-size:14px;"><span style="font-family:'Courier New';background-color:inherit;">Unknown</span></span></p></td></tr></tbody></table>
 
 
