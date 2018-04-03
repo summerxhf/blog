@@ -2,6 +2,8 @@ package com.codingfuns.blog.controller;
 
 import com.codingfuns.blog.service.BlogService;
 import com.codingfuns.blog.controller.bean.BlogVo;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
@@ -14,7 +16,7 @@ import java.util.List;
 
 @Controller
 public class BlogController {
-
+    private static Logger logger = LoggerFactory.getLogger(BlogController.class);
     @Autowired
     private BlogService service;
 
@@ -43,6 +45,7 @@ public class BlogController {
 //        String title = new String(title4url.getBytes("iso8859-1"),"UTF-8");//解决url中文乱码问题.
         BlogVo blogVo = service.findBlogByTitle(title4url);
         if (blogVo == null) {
+            logger.error("article subjet is --" + title4url +"--blogVo is null");
             response.setStatus(HttpServletResponse.SC_NOT_FOUND);
             return "404";
         }
