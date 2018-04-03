@@ -109,8 +109,15 @@ public class BlogService {
             return "500";
         }
         try {
-            Document doc = Jsoup.connect(gitUrl).timeout(60 * 1000).get();
-            if (!doc.select(".commit-tease-sha").text().trim().equals(hashCode)) {
+            Document doc = Jsoup.connect(gitUrl).timeout(60 * 10000).get();
+            String remoteHashCode = doc.select(".commit-tease-sha").text().trim();
+            if (StringUtils.isEmpty(remoteHashCode)) {
+                String commitUrl = "https://github.com" + doc.select(".commit-tease").attr("src");
+                Document commitDoc = Jsoup.connect(commitUrl).timeout(60 * 1000).get();
+                remoteHashCode = commitDoc.select(".commit-tease-sha").text().trim();
+            }
+            if (!StringUtils.equals(remoteHashCode, hashCode)) {
+//                logger.info("hashCode:" + hashCode + ", error hashCode");
                 return "500";
             }
             String title = doc.select("article h1").first().text();

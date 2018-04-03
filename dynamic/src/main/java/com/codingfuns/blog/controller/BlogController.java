@@ -40,8 +40,8 @@ public class BlogController {
 
     @RequestMapping(value="/{title}" ,produces = {"application/json;charset=UTF-8"})
     public String showContent(ModelMap modelMap, @PathVariable("title") String title4url, HttpServletResponse response) throws UnsupportedEncodingException {
-        String title = new String(title4url.getBytes("iso8859-1"),"UTF-8");//解决url中文乱码问题.
-        BlogVo blogVo = service.findBlogByTitle(title);
+//        String title = new String(title4url.getBytes("iso8859-1"),"UTF-8");//解决url中文乱码问题.
+        BlogVo blogVo = service.findBlogByTitle(title4url);
         if (blogVo == null) {
             response.setStatus(HttpServletResponse.SC_NOT_FOUND);
             return "404";
