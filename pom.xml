@@ -12,13 +12,14 @@
     <packaging>pom</packaging>
     <properties>
         <spring.version>4.1.6.RELEASE</spring.version>
+        <!--<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>-->
     </properties>
     <profiles>
         <profile>
             <id>develop</id>
             <properties>
                 <active.profile>dev</active.profile>
-                <database>192.168.75.62</database>
+                <database>108.61.160.203</database>
                 <war.name>ROOT</war.name>
             </properties>
         </profile>
