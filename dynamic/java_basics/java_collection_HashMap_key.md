@@ -137,10 +137,11 @@ dog3对象的hashcode值为--5--dog4对象的hashcode值为--5
 key为包装类型的对象的时候，key是否重复判断主要还是看key的hashCode() ,和key的equals()方法是否相同。
 
 
-
-
 - summary<br>
-HashMap中的key是否允许重复,取决于key的hashCode()方法以及key
+HashMap中的key是否允许重复,取决于key的hashCode()方法以及key的equals()方法,所以当key为String类型的时候,
+String的equals()重写了Object的equals()方法,所以判断key是否相同与Key为Object类型则不同,当然其他的类型也一样,
+例如Integer 和Long,Boolean等
+
 
 
 
