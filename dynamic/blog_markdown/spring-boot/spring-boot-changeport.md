@@ -1,14 +1,14 @@
 # spring boot change port
-ÎÒÃÇÔÚmain·½·¨ÖĞÊ¹ÓÃSpringApplication.run(ResourcesController.class,args),Ä¬ÈÏµÄtomcatµÄ¶Ë¿ÚºÅÊÇ8080,ÎÒÃÇ¿ÉÒÔĞŞ¸Ä
-Ä¬ÈÏµÄ¶Ë¿ÚºÅ,Á½ÖÖ·½Ê½ÈçÏÂ<br>
-**1.ĞŞ¸Äapplication.propertiesÖĞÌí¼Ó**
+æˆ‘ä»¬åœ¨mainæ–¹æ³•ä¸­ä½¿ç”¨SpringApplication.run(ResourcesController.class,args),é»˜è®¤çš„tomcatçš„ç«¯å£å·æ˜¯8080,æˆ‘ä»¬å¯ä»¥ä¿®æ”¹
+é»˜è®¤çš„ç«¯å£å·,ä¸¤ç§æ–¹å¼å¦‚ä¸‹<br>
+**1.ä¿®æ”¹application.propertiesä¸­æ·»åŠ **
 ```
-=8090
+server.port=8090
 ```
 
-**2.Ìí¼Óvm²ÎÊı**
+**2.æ·»åŠ vmå‚æ•°**
 ```
 -Dserver.port=8090
 ```
 
-¿ÉÒÔÅäÖÃÆäËûµÄÉèÖÃ,[µã»÷ÕâÀï](https://docs.spring.io/spring-boot/docs/1.3.3.RELEASE/reference/html/common-application-properties.html)
+å¯ä»¥é…ç½®å…¶ä»–çš„è®¾ç½®,[ç‚¹å‡»è¿™é‡Œ](https://docs.spring.io/spring-boot/docs/1.3.3.RELEASE/reference/html/common-application-properties.html)
