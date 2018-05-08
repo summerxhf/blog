@@ -1,5 +1,5 @@
 
-# volatile变量
+# volatile关键字修饰变量
 - 原理<br>
 英 ['vɒlətaɪl]
 
