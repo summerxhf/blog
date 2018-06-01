@@ -1,6 +1,6 @@
 # centos6 mysql yum install
 
-inmy company i neet test myself code,so i need install mysql in my virtual box linux system. as follow step by step.
+in my company i neet test myself code,so i need install mysql in my virtual box linux system. as follow step by step.
 
 - 1 if already install mysql
 ```
