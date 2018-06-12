@@ -20,7 +20,7 @@
             <properties>
                 <active.profile>dev</active.profile>
                 <database>108.61.160.203</database>
-                <war.name>ROOT</war.name>
+                <war.name>dev-ROOT</war.name>
             </properties>
         </profile>
         <profile>
@@ -28,7 +28,7 @@
             <properties>
                 <active.profile>product</active.profile>
                 <database>127.0.0.1</database>
-                <war.name>dev-ROOT</war.name>
+                <war.name>ROOT</war.name>
             </properties>
         </profile>
     </profiles>

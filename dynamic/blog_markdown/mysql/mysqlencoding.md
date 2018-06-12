@@ -15,7 +15,7 @@ mysql  Ver 14.14 Distrib 5.7.20, for Linux (x86_64) using  EditLine wrapper
 **2 modify my.cnf
 my my.cnf is path is /etc/my.cnf**
 
-you can use find comd to find it.
+you can use find cmd to find it.
 
 ```
 [root@xhf_cloud etc]# vi my.cnf
