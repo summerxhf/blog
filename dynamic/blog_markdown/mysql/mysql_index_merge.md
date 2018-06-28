@@ -5,35 +5,35 @@
 
 ![explain执行结果](https://uploads.disquscdn.com/images/3d6371538541f197d6ad1b7a54ee7bd347ac1c8139fa25f66fd44b9a8e8283df.png)
 
-1.select_type: SIMPLE说明是简单的select 查询.
-2. table:使用的哪些表
-3.type: ref表sf2普通索引引用(不是唯一索引), index_merge :使用了多个独立的索引, 且为and之间查询.
-4.possible_keys: 可能使用到的索引
-5.key: 使用到的索引
-6.key_len: 使用索引的长度,越短越好.
-7.ref: 显示使用哪个列或者常数列与key一起从表中选择.
+1.select_type: SIMPLE说明是简单的select 查询.<br>
+2. table:使用的哪些表<br>
+3.type: ref表sf2普通索引引用(不是唯一索引), index_merge :使用了多个独立的索引, 且为and之间查询.<br>
+4.possible_keys: 可能使用到的索引<br>
+5.key: 使用到的索引<br>
+6.key_len: 使用索引的长度,越短越好.<br>
+7.ref: 显示使用哪个列或者常数列与key一起从表中选择.<br>
 
-8.rows: 执行的行数, 是一个预估值.
-9.extra: explain查询的重要信息, 
+8.rows: 执行的行数, 是一个预估值.<br>
+9.extra: explain查询的重要信息, <br>
     Using intersect(idx_sfid,idx_cfid); Using where; Using temporary<br>
     : 使用交叉的索引,使用了临时表(尽量避免交叉索引和 磁盘上的临时表)<br>
     Using index condition; Using where:<br>
     查询覆盖了索引; 使用了where从句来限制那些行将与下一张表匹配,或者使用了哪些行返回给用户.
     
-解决使用index_merge问题
+解决使用index_merge问题<br>
 
-可以使用mysql的  FORCE INDEX(idx_service_time), 这样强制使用单个索引,而不使用交叉索引, 会快很多.(当数据量比较大的时候)
+可以使用mysql的  FORCE INDEX(idx_service_time), 这样强制使用单个索引,而不使用交叉索引, 会快很多.(当数据量比较大的时候)<br>
 
-优化后的的执行计划如下图所示
+优化后的的执行计划如下图所示<br>
 
 ![explain优化后结果](https://uploads.disquscdn.com/images/08afe4ffc8086919036df08b8721385147ada2bedc967e6074bd19026e8278d9.png)
   
 FORCE INDEX 是帮助mysql执行器进行优化，手动的指定使用哪个索引，也有去掉索引等命令。<br>
-例如禁止某个索引
+例如禁止某个索引<br>
 ```
 select * from table ignore index(PRI) limit 2;(禁止使用主键)
 ```
-强制使用索引
+强制使用索引<br>
 ```
 select * from table force index(ziduan1_index) limit 2;(强制使用索引"ziduan1_index")
 
