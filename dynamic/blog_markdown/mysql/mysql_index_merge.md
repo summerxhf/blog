@@ -1,4 +1,4 @@
-# mysql 慢sql之index_merge
+# mysql 慢sql优化之index_merge
 
 
 - 场景:慢sql explain 查询如下结果
