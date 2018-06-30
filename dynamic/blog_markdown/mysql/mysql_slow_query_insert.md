@@ -76,10 +76,10 @@
    ```
    
    执行完结果如下:<br>
-   
-   ```
-   
-   ```
+    ![清除后结果](https://uploads.disquscdn.com/images/2e425f05cd6296b718f69ab008882d23086b242cb0f0b788deecc2fcbf35faf1.png 
+
+ )
+      
    
    
    
