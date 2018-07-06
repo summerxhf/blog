@@ -5,6 +5,21 @@
 
 ![explain执行结果](https://uploads.disquscdn.com/images/3d6371538541f197d6ad1b7a54ee7bd347ac1c8139fa25f66fd44b9a8e8283df.png)
 
+explain大概说明:<br>
+
+- explain <br>
+id：SQL 语句执行顺序编号
+select_type：SQL 语句执行的类型，主要区别普通查询、联合查询和子查询之类的复杂查询
+table：SQL 语句执行所引用的数据表
+type：显示连接使用的类型
+possible_keys：指出 MySQL 能在该数据表中使用哪些索引有助于查询
+key：SQL 语句执行时所使用的索引
+key_len：SQL 语句执行时所使用的索引的长度。在不损失精确性的情况下，长度越短越好
+ref：显示索引的哪一列被使用了
+rows：MySQL 认为必须检查的用来返回请求数据的行数
+Extra：提供 MySQL 优化器一系列额外信息
+
+在sql执行计划显示<br>
 1.select_type: SIMPLE说明是简单的select 查询.<br>
 2. table:使用的哪些表<br>
 3.type: ref表sf2普通索引引用(不是唯一索引), index_merge :使用了多个独立的索引, 且为and之间查询.<br>
