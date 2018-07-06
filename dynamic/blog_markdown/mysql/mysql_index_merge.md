@@ -8,16 +8,17 @@
 explain大概说明:<br>
 
 - explain <br>
-id：SQL 语句执行顺序编号
-select_type：SQL 语句执行的类型，主要区别普通查询、联合查询和子查询之类的复杂查询
-table：SQL 语句执行所引用的数据表
-type：显示连接使用的类型
-possible_keys：指出 MySQL 能在该数据表中使用哪些索引有助于查询
-key：SQL 语句执行时所使用的索引
-key_len：SQL 语句执行时所使用的索引的长度。在不损失精确性的情况下，长度越短越好
-ref：显示索引的哪一列被使用了
-rows：MySQL 认为必须检查的用来返回请求数据的行数
-Extra：提供 MySQL 优化器一系列额外信息
+id：SQL 语句执行顺序编号<br>
+select_type：SQL 语句执行的类型，主要区别普通查询、联合查询和子查询之类的复杂查询<br>
+table：SQL 语句执行所引用的数据表<br>
+type：显示连接使用的类型<br>
+possible_keys：指出 MySQL 能在该数据表中使用哪些索引有助于查询<br>
+key：SQL 语句执行时所使用的索引<br>
+key_len：SQL 语句执行时所使用的索引的长度。在不损失精确性的情况下，长度越短越好<br>
+ref：显示索引的哪一列被使用了<br>
+rows：MySQL 认为必须检查的用来返回请求数据的行数<br>
+Extra：提供 MySQL 优化器一系列额外信息<br>
+
 
 在sql执行计划显示<br>
 1.select_type: SIMPLE说明是简单的select 查询.<br>
