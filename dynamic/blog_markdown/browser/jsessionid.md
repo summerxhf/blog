@@ -1,4 +1,4 @@
-# JESSIONID 怎么生成的?
+# JESSIONID 的生成
 
     JSESSIONID cookie is created/sent when session is created. 
 Session is created when your code calls request.getSession() or request.getSession(true) for the first time. 
