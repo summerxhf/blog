@@ -17,3 +17,4 @@ jessionid是服务端调用request.getSession()的同时, 会发送给客户端,
 
 
 ![图片来源于网络]( https://uploads.disquscdn.com/images/5dbd2c8d391c05eb6bf6c36cba4ff934995c66b544175cae9e2e63f118c142de.png )
+(此图片来自于网络)
