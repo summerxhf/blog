@@ -22,13 +22,13 @@ select SQL_CACHE count(*) from fp_data;
 reset query cache;
 ```
 
-7、查询关联的表最多不超过三个，当关联表过多时，可以分页查询或者把某些字段合并到一个表中。<br>
 8、复合字段索引查询，最好要符合最左匹配原则。（A B C 生效的之后 A、AB、ABC）<br>
 
 9、表中的字段类型，符合业务的要求同时也在数据库这加以控制，比如int 默认长度为11，是代表字段的长度，如果是主键自增可以设置为无符号类型。
 例如status字段只能是0,1,2,tinyint类型，当长度为1的时候可以代表true或者false，长度为tinyint(2)的时候代表具体的值。<br>
 
-10、表中最好添加created_time（默认：CURRENT_TIMESTAMP）、updated_time（默认CURRENT_TIMESTAMP且根据当前时间戳更新），
+10、表中最好添加created_ti7、查询关联的表最多不超过三个，当关联表过多时，可以分页查询或者把某些字段合并到一个表中。<br>
+me（默认：CURRENT_TIMESTAMP）、updated_time（默认CURRENT_TIMESTAMP且根据当前时间戳更新），
 这样对表的操作有记录，知道最后更改表的时间。<br>
 
 11、查询缓慢有时候可能是表的碎片空间占用太大，所以必要时可以清除表的碎片空间。<br>
