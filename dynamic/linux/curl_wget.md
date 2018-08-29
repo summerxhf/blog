@@ -53,4 +53,4 @@ wget: unable to resolve host address “‘user=foo”
 
 
 - **summary**<br>
- 之前一直用wget命令的get方式,今天用post方式且传参在header中.
+ 之前一直用wget命令的get方式,今天用post方式且传参在header中,总结一下.
