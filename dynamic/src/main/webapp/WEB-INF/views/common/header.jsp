@@ -53,7 +53,8 @@
                             <%--<a role="menuitem" href="http://www.codingfuns.com/java-core-tutorial">Java Core</a>--%>
                         <%--</li>--%>
                         <%--<li>--%>
-                            <a role="menuitem" href="http://www.codingfuns.com/spring-boot-tutorial">Spring Boot</a>
+                            <%--<a role="menuitem" href="http://www.codingfuns.com/spring-boot-tutorial">Spring Boot</a>--%>
+                            <a role="menuitem" href="/spring-boot-tutorial">Spring Boot</a>
                         <%--</li>--%>
                         <%--<li>--%>
                             <%--<a role="menuitem" href="http://www.codingfuns.com/mybatis-tutorial">MyBatis</a>--%>
@@ -62,7 +63,8 @@
                 </li>
                 <%--<li><a href="http://www.codingfuns.com/front-end-tutorial">Front End</a></li>--%>
                 <%--<li><a href="http://www.codingfuns.com/design-pattern-tutorial">Design Pattern</a></li>--%>
-                <li><a href="http://www.codingfuns.com/linux-often-used-commands-tutorial">Linux</a>
+                <%--<li><a href="http://www.codingfuns.com/linux-often-used-commands-tutorial">Linux</a>--%>
+                <li><a href="/linux-often-used-commands-tutorial">Linux</a>
                 <%--<li><a href="http://www.codingfuns.com/book-list">Books</a></li>--%>
             </ul>
             <form class="navbar-form pull-right" method="get"

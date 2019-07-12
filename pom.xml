@@ -19,7 +19,7 @@
             <id>develop</id>
             <properties>
                 <active.profile>dev</active.profile>
-                <database>108.61.160.203</database>
+                <database>10.69.57.77</database>
                 <war.name>dev-ROOT</war.name>
             </properties>
         </profile>
